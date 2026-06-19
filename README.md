@@ -1,56 +1,141 @@
-🏡 House Price Prediction - Machine Learning
-Author: Sadi Daveed (@daveedreddy)
-Role: AI & Data Science Intern at XYlofyAI
+# 🏡 House Price Prediction - Machine Learning
 
-📌 Project Overview
-This repository contains the complete Week 1 project for my Data Science Internship at XYlofyAI. The objective of this project is to eliminate guesswork in real estate evaluations by building a machine learning model capable of accurately predicting house prices based on various property features and amenities.
+**Author:** Sadi Daveed (@daveedreddy)  
+**Role:** AI & Data Science Intern at XYlofyAI
 
-📊 Dataset & Features
-The model is trained on a comprehensive real estate dataset containing various features such as:
+---
 
-Total Area (Square Feet)
+## 📌 Project Overview
 
-Number of Bedrooms & Bathrooms
+This repository contains the complete **Week 1 Project** for my Data Science Internship at **XYlofyAI**.
 
-Number of Stories
+The objective of this project is to eliminate guesswork in real estate evaluations by building a machine learning model capable of accurately predicting house prices based on various property features and amenities.
 
-Amenities (Air Conditioning, Guestroom, Basement, Parking, etc.)
+---
 
-Furnishing Status
+## 📊 Dataset & Features
 
-🛠️ Data Processing & Methodology
-Data Cleaning: Checked for null values and duplicates to ensure data integrity.
+The model is trained on a comprehensive real estate dataset containing features such as:
 
-Exploratory Data Analysis (EDA): Created distribution histograms, scatter plots, and boxplots to visualize how different categorical features impact house prices.
+- Total Area (Square Feet)
+- Number of Bedrooms
+- Number of Bathrooms
+- Number of Stories
+- Air Conditioning Availability
+- Guestroom Availability
+- Basement Availability
+- Parking Capacity
+- Furnishing Status
+- Other Property Amenities
 
-Feature Engineering: Converted categorical text data ('yes'/'no', 'furnished') into numerical format using One-Hot Encoding (pd.get_dummies).
+---
 
-Train-Test Split: Divided the dataset into 80% training data and 20% testing data.
+## 🛠️ Data Processing & Methodology
 
-🤖 Machine Learning Models
-To determine the best predictive approach, two different regression algorithms were trained and evaluated:
+### 1. Data Cleaning
+- Checked for missing values (null values)
+- Removed duplicate records
+- Ensured overall data quality and consistency
 
-Linear Regression
+### 2. Exploratory Data Analysis (EDA)
+- Distribution Histograms
+- Scatter Plots
+- Box Plots
+- Correlation Heatmap
 
-Random Forest Regressor
+These visualizations helped identify relationships between property features and house prices.
 
-Performance Metrics:
-Both models achieved an R² score of ~65% and a Mean Absolute Error (MAE) of ~9.5 Lakhs, indicating moderate but consistent predictive accuracy.
+### 3. Feature Engineering
+- Converted categorical features into numerical format
+- Applied **One-Hot Encoding** using `pd.get_dummies()`
+- Prepared the dataset for machine learning algorithms
 
-💡 Key Insights
-Through the Correlation Heatmap and feature analysis, the data revealed that:
+### 4. Train-Test Split
+- Training Data: **80%**
+- Testing Data: **20%**
 
-Area, Bathrooms, and Air Conditioning have the highest positive correlation with the final property price.
+---
 
-Surprisingly, features often considered premium, like basements and guestrooms, showed a relatively weak correlation with the price.
+## 🤖 Machine Learning Models
 
-Recommendation: Real estate marketing campaigns should heavily highlight properties with multiple bathrooms and AC, as buyers pay a substantial premium for these amenities.
+To determine the most effective predictive approach, two regression models were trained and evaluated:
 
-💻 Technologies Used
-Language: Python
+### Linear Regression
+A baseline regression model used to establish initial prediction performance.
 
-Data Manipulation: Pandas, NumPy
+### Random Forest Regressor
+An ensemble learning model capable of capturing complex relationships within the data.
 
-Data Visualization: Matplotlib, Seaborn
+---
 
-Machine Learning: Scikit-Learn
+## 📈 Model Performance
+
+| Metric | Linear Regression | Random Forest Regressor |
+|----------|------------------|------------------------|
+| R² Score | ~65% | ~65% |
+| MAE | ~9.5 Lakhs | ~9.5 Lakhs |
+
+### Performance Summary
+Both models achieved:
+
+- **R² Score:** Approximately 65%
+- **Mean Absolute Error (MAE):** Approximately ₹9.5 Lakhs
+
+These results indicate moderate but consistent predictive accuracy.
+
+---
+
+## 💡 Key Insights
+
+The correlation analysis and feature importance study revealed:
+
+✅ **Area** has a strong positive impact on house prices.
+
+✅ **Number of Bathrooms** significantly influences property value.
+
+✅ **Air Conditioning** contributes positively to higher selling prices.
+
+⚠️ Features such as:
+
+- Basement
+- Guestroom
+
+showed relatively weaker correlations with price compared to other major features.
+
+### Business Recommendation
+
+Real estate marketing campaigns should emphasize:
+
+- Larger property area
+- Multiple bathrooms
+- Air conditioning facilities
+
+These features command a noticeable premium in the housing market and can significantly influence buyer decisions.
+
+---
+
+## 💻 Technologies Used
+
+### Programming Language
+- Python
+
+### Data Manipulation
+- Pandas
+- NumPy
+
+### Data Visualization
+- Matplotlib
+- Seaborn
+
+### Machine Learning
+- Scikit-Learn
+
+---
+
+## 🚀 Project Outcome
+
+This project demonstrates how machine learning can be applied to real-world real estate problems by transforming raw housing data into meaningful price predictions. The developed models provide valuable insights for buyers, sellers, and real estate professionals, helping them make more informed decisions.
+
+---
+
+### ⭐ If you found this project useful, consider giving it a star on GitHub!
